@@ -5,3 +5,34 @@
 
     <h1>HTML Book Form</h1>
 
+@if (ViewData["Message"] != null)
+{
+    <h2 class="alert alert-success">@ViewData["Message"]</h2>
+}
+else
+{
+    <form method="post">
+        @*<label for="book-title">Title</label>*@
+        <input class="form-control form-control-lg" type="text" name="book-title" placeholder="Title" />
+        <span>*</span>
+        <br />
+
+        @*<label for="author">Author</label>*@
+        <input class="form-control form-control-lg" type="text" name="author" placeholder="Author" />
+        <span>*</span>
+        <br />
+
+        @*<label for="isbn">ISBN</label>*@
+        <input class="form-control form-control-lg" type="text" name="isbn" placeholder="ISBN" />
+        <span>*</span>
+        <br />
+
+        @*<label for="bpublication-date">Publication date</label>*@
+        <input class="form-control form-control-lg" type="date" name="publication-date" placeholder="Publication Date"/>
+        <span>*</span>
+        <br />
+
+        <input type="submit" value="Add book" class="btn btn-dark" />
+
+    </form>
+}

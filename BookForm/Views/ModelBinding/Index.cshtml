@@ -1,0 +1,30 @@
+﻿@model Book
+@{
+    ViewData["Title"] = "Model Binding Book Form";
+}
+
+    <h1>Model Binding Book Form</h1>
+
+    <form method="post">
+        <input class="form-control form-control-lg" asp-for="BookTitle" name="book-title" placeholder="Title" />
+        <span asp-validation-for="BookTitle" class="text-danger"></span>
+        <br />
+
+        <input class="form-control form-control-lg" asp-for="Author" name="author" placeholder="Author" />
+        <span asp-validation-for="Author" class="text-danger"></span>
+        <br />
+
+        <input class="form-control form-control-lg" asp-for="Isbn" name="isbn" placeholder="ISBN" />
+        <span asp-validation-for="Isbn" class="text-danger"></span>
+        <br />
+
+        <input class="form-control form-control-lg" asp-for="PublicationDate" name="publication-date" placeholder="Publication date" />
+        <span asp-validation-for="PublicationDate"class="text-danger"></span>
+        <br />
+
+
+        <input type="submit" value="Add book" class="btn btn-dark" />
+
+
+    </form>
+
